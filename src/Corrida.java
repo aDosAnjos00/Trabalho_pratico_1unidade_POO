@@ -8,8 +8,8 @@ class Veiculo {
     protected Random rnd = new Random();
 
     /**
-     *
-     * @param nome
+     * Metodo utilizada para receber nome e simbolo para diferenciar os veiculo
+     * @param nome 
      * @param simbolo
      */
     public Veiculo(String nome, char simbolo) {
@@ -37,7 +37,7 @@ class Moto extends Veiculo {
 
 public class Corrida {
     /**
-     * 
+     * Metodo responsavel por realizar a corrida verificando as exceções 
      * @param args
      * @throws InterruptedException
      */
@@ -57,10 +57,10 @@ public class Corrida {
     }
 
     /**
-     * 
-     * @param v1
-     * @param v2
-     * @param maxDistance
+     * Metodo utilizado para mostrar a pista e avanço dos veiculos durante a corrida 
+     * @param v1 Recebe a posição do Primeiro Veiculo
+     * @param v2 Recebe a posição do Segundo Veiculo
+     * @param maxDistance Limite da pista de prova
      */
     private static void mostrarPista(Veiculo v1, Veiculo v2, int maxDistance) {
         System.out.println(" ".repeat(Math.min(v1.getDistancia(), maxDistance)) + v1.getSimbolo());
@@ -70,10 +70,10 @@ public class Corrida {
     }
 
     /**
-     * 
-     * @param v1
-     * @param v2
-     * @param maxDistance
+     * Metodo utlizado para identificar e mostrar o vencedor
+     * @param v1 Recebe a distancia percorrida pelo primeiro veiculo
+     * @param v2 Recebe a distancia percorrida pelo segundo veiculo
+     * @param maxDistance Recebe a distancia da pista 
      */
     private static void verificarVencedor(Veiculo v1, Veiculo v2, int maxDistance) {
         System.out.println("Distâncias finais: " + v1.getNome() + "=" + v1.getDistancia() +
